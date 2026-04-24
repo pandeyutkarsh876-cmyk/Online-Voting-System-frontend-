@@ -17,7 +17,7 @@ const Results = () => {
   const fetchResults = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/elections/${id}/results`
+        `https://online-voting-system-backend-ofbg.onrender.com/api/elections/${id}/results`
       );
       setResults(res.data);
     } catch (error) {

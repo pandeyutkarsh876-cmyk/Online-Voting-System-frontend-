@@ -17,7 +17,7 @@ const Dashboard = () => {
 
   const fetchElections = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/elections');
+      const res = await axios.get('https://online-voting-system-backend-ofbg.onrender.com/api/elections');
       setElections(res.data.elections);
     } catch (error) {
       toast.error('Failed to fetch elections');

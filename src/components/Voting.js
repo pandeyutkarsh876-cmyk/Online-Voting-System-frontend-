@@ -22,8 +22,8 @@ const Voting = () => {
   const fetchElectionData = async () => {
     try {
       const [electionRes, candidatesRes] = await Promise.all([
-        axios.get(`http://localhost:5000/api/elections/${id}`),
-        axios.get(`http://localhost:5000/api/candidates?election=${id}`)
+        axios.get(`https://online-voting-system-backend-ofbg.onrender.com/api/elections/${id}`),
+        axios.get(`https://online-voting-system-backend-ofbg.onrender.com/api/candidates?election=${id}`)
       ]);
 
       setElection(electionRes.data.election);
@@ -55,7 +55,7 @@ const Voting = () => {
     setSubmitting(true);
 
     try {
-      await axios.post('http://localhost:5000/api/votes', {
+      await axios.post('https://online-voting-system-backend-ofbg.onrender.com/api/votes', {
         candidate: selectedCandidate,
         election: id
       });

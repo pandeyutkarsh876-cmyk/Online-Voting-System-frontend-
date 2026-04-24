@@ -20,7 +20,7 @@ const CandidateRegistration = () => {
 
   const fetchElections = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/elections');
+      const res = await axios.get('https://online-voting-system-backend-ofbg.onrender.com/api/elections');
       setElections(res.data.elections);
     } catch (error) {
       toast.error('Failed to fetch elections');
@@ -41,7 +41,7 @@ const CandidateRegistration = () => {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:5000/api/candidates', formData);
+      await axios.post('https://online-voting-system-backend-ofbg.onrender.com/api/candidates', formData);
       toast.success('Candidate registration successful!');
       setFormData({
         name: '',
