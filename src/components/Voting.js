@@ -16,6 +16,7 @@ const Voting = () => {
 
   useEffect(() => {
     fetchElectionData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   const fetchElectionData = async () => {
